@@ -7,7 +7,7 @@
                 <img src="../assets/1.jpg" width="160">
             </div>
 
-            <div class="menu">
+            <div class="menu1">
                 <ul>
                     <li><a href="#">课程 </a></li>
                     <li><a href="#">职业路径</a></li>
@@ -29,16 +29,25 @@
             <div class="gou">
                 <a>购物车</a>
             </div>
+        </div>
+        <div>
+            <div class="content"></div>
 
+            <div class="menu">
+                <i-menu></i-menu>
+            </div>
 
         </div>
-
-
     </div>
 </template>
 
 <script>
-
+    import iMenu from './menu.vue'
+    export default {
+        components:{iMenu},
+        data(){
+        }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -55,12 +64,12 @@
     }
 
     .img {
-        margin: 10px 30px;
+        padding: 8px 30px;
         float: left;
         display: block;
     }
 
-    .menu li {
+    .menu1 li {
         float: left;
         list-style-type: none;
         padding-left: 20px;
@@ -70,13 +79,13 @@
         display: block;
     }
 
-    .menu a:link, .menu a:visited {
+    .menu1 a:link, .menu1 a:visited {
         text-decoration: none;
         color: #333;
         font-size: large;
     }
 
-    .menu a:hover, .menu a:active {
+    .menu1 a:hover, .menu1 a:active {
         color: #000;
     }
     .search{
@@ -87,7 +96,7 @@
         line-height: 72px;
     }
     .gou{
-        padding-right: 80px;
+        padding-right: 50px;
         height: 72px;
         float: right;
         line-height: 72px;
@@ -126,6 +135,18 @@
     }
     .img1{
         padding: 20px 50px;
+        float: right;
+    }
+    .menu{
+        /*display: block;*/
+        height: 444px;
+        width: 216px;
+        float: right;
+    }
+    .content{
+        width:930px;
+        height:444px;
+        background: #eeeeee;
         float: right;
     }
 
