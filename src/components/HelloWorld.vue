@@ -24,14 +24,39 @@
 
             <div class="download"><a>下载APP</a></div>
 
-            <div class="img1"><img src="../assets/2.png" width="35px"></div>
+            <div class="img_1"><img src="../assets/2.png" width="35px"></div>
 
             <div class="gou">
                 <a>购物车</a>
             </div>
         </div>
-        <div>
-            <div class="content"></div>
+        <div class="middle">
+            <div class="content">
+                <img src="../assets/2.jpg" >
+                <div class="banner">
+                    <a>
+                        <p class="tit">Web前端工程师</p>
+                        <p class="desc">互联网最火爆的技术</p>
+                    </a>
+                    <a>
+                        <p class="tit">Java工程师</p>
+                        <p class="desc">健壮、安全、适用广泛</p>
+                    </a>
+                    <a>
+                        <p class="tit">Android工程师</p>
+                        <p class="desc">移动设备市场份额第一</p>
+                    </a>
+                    <a>
+                        <p class="tit">PHP工程师</p>
+                        <p class="desc">世界上最好的语言</p>
+                    </a>
+                    <a>
+                        <p class="tit">iOS工程师</p>
+                        <p class="desc">可能是全球最好的系统</p>
+                    </a>
+                </div>
+                <div class="inner"></div>
+            </div>
 
             <div class="menu">
                 <i-menu></i-menu>
@@ -133,21 +158,50 @@
         padding:10px 30px;
         color: #666;
     }
-    .img1{
+    .img_1{
         padding: 20px 50px;
         float: right;
     }
     .menu{
         /*display: block;*/
-        height: 444px;
-        width: 216px;
         float: right;
     }
+    .middle{
+        width:1152px;
+        margin: 30px auto;
+    }
     .content{
-        width:930px;
-        height:444px;
-        background: #eeeeee;
+        width:936px;
+        height:456px;
+        background: #888;
         float: right;
+        position: relative;
+    }
+    .banner{
+        width:936px;
+        height:140px;
+        background-color: white;
+    }
+    .banner a{
+        width: 180px;
+        height: 128px;
+        display: block;
+        float: left;
+    }
+    .tit{
+        margin-top: 50px;
+        font-size: large;
+        color: black;
+    }
+    .desc{
+        font-size: smaller;
+        color: #888888;
+    }
+    .inner{
+        width: 768px;
+        height: 210px;
+        background-color: #555;
+        position: absolute;
     }
 
 </style>
