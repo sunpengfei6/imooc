@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  name: 'app'
+  data(){
+    return {
+      isFrontEnd:false
+    }
+  }
 }
 </script>
 

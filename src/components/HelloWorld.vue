@@ -55,7 +55,7 @@
                         <p class="desc">可能是全球最好的系统</p>
                     </a>
                 </div>
-                <div class="inner"></div>
+
             </div>
 
             <div class="menu">
@@ -71,7 +71,9 @@
     export default {
         components:{iMenu},
         data(){
-        }
+            return {
+            }
+        },
     }
 </script>
 
@@ -197,11 +199,15 @@
         font-size: smaller;
         color: #888888;
     }
-    .inner{
-        width: 768px;
-        height: 210px;
-        background-color: #555;
-        position: absolute;
-    }
+    /*.middle .inner{*/
+        /*width: 768px;*/
+        /*height: 210px;*/
+        /*background-color: #555;*/
+        /*position: absolute;*/
+        /*left:0;*/
+        /*top:0;*/
+        /*opacity:1;*/
+    /*}*/
+
 
 </style>
