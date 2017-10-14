@@ -3,7 +3,7 @@
     <div class="menu-box">
         <ul>
             <li @click="toFrontEnd" @mouseover="onFrontEnd">前端开发</li>
-            <li @click="toBackEnd" @mouseover="">后端开发</li>
+            <li @click="toBackEnd" @mouseover="onBackEnd">后端开发</li>
             <li @click="toFrontEnd">移动开发</li>
             <li @click="toFrontEnd">数据库</li>
             <li @click="toFrontEnd">云计算&大数据</li>
@@ -11,6 +11,7 @@
             <li @click="toFrontEnd">UI设计</li>
         </ul>
         <div v-show="isFrontEnd" class="inner"></div>
+        <div v-show="isBackEnd" class="inner"></div>
     </div>
 
 
@@ -20,12 +21,16 @@
     export default {
         data(){
             return {
-                isFrontEnd:false
+                isFrontEnd:false,
+                isBackEnd:false
             }
         },
         methods: {
             onFrontEnd(){
                 this.isFrontEnd = true
+            },
+            onBackEnd(){
+                this.isBackEnd = true
             },
             toFrontEnd(){
                 alert('跳转到前端')
