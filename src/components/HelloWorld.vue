@@ -27,9 +27,10 @@
             <div class="img_1"><img src="../assets/2.png" width="35px"></div>
 
             <div class="gou">
-                <a>购物车</a>
+                <a @mouseover="onshopcar" @mouseout="offshopcar">购物车</a>
             </div>
         </div>
+        <div v-show="isshopcar" class="shopcar"></div>
         <div class="middle">
             <div class="content">
                 <img src="../assets/2.jpg" >
@@ -72,8 +73,18 @@
         components:{iMenu},
         data(){
             return {
+                isshopcar:false
+
             }
         },
+        methods: {
+            onshopcar(){
+                this.isshopcar = true
+            },
+            offshopcar(){
+                this.isshopcar = false
+            },
+        }
     }
 </script>
 
@@ -208,6 +219,14 @@
         /*top:0;*/
         /*opacity:1;*/
     /*}*/
+    .shopcar{
+        width: 350px;
+        height: 400px;
+        margin-left: 800px;
+        background-color: #888888;
+        position: absolute;
+        z-index: 1;
+    }
 
 
 </style>

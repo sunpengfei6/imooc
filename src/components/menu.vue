@@ -2,13 +2,13 @@
 
     <div class="menu-box">
         <ul>
-            <li @click="toFrontEnd" @mouseover="onFrontEnd">前端开发</li>
-            <li @click="toBackEnd" @mouseover="onBackEnd">后端开发</li>
-            <li @click="toFrontEnd">移动开发</li>
-            <li @click="toFrontEnd">数据库</li>
-            <li @click="toFrontEnd">云计算&大数据</li>
-            <li @click="toFrontEnd">运维&测试</li>
-            <li @click="toFrontEnd">UI设计</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">前端开发</li>
+            <li @click="toBackEnd" @mouseover="onBackEnd" @mouseout="offBackEnd">后端开发</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">移动开发</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">数据库</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">云计算&大数据</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">运维&测试</li>
+            <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">UI设计</li>
         </ul>
         <div v-show="isFrontEnd" class="inner"></div>
         <div v-show="isBackEnd" class="inner"></div>
@@ -21,16 +21,22 @@
     export default {
         data(){
             return {
-                isFrontEnd:false,
-                isBackEnd:false
+                isFrontEnd: false,
+                isBackEnd: false
             }
         },
         methods: {
             onFrontEnd(){
                 this.isFrontEnd = true
             },
+            offFrontEnd(){
+                this.isFrontEnd = false
+            },
             onBackEnd(){
                 this.isBackEnd = true
+            },
+            offBackEnd(){
+                this.isBackEnd = false
             },
             toFrontEnd(){
                 alert('跳转到前端')
@@ -76,9 +82,6 @@
         background-color: rgba(255, 255, 255, .6);
         cursor: pointer;
     }
-    li:hover .inner{
-        opacity: 1;
-    }
 
     .inner {
         width: 768px;
@@ -87,8 +90,7 @@
         position: absolute;
         float: left;
         left: 216px;
-        top:0;
-        opacity: 1;
+        top: 0;
     }
 
 </style>
