@@ -10,7 +10,18 @@
             <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">运维&测试</li>
             <li @click="toFrontEnd" @mouseenter="onFrontEnd" @mouseleave="offFrontEnd">UI设计</li>
         </ul>
-        <div v-show="isFrontEnd" class="inner"></div>
+        <div v-show="isFrontEnd" class="inner">
+            <p>基础</p>
+            <a href="#">HTML/CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">JQuery</a>
+            <p>进阶</p>
+            <a href="#">Html5</a>
+            <a href="#">CSS3</a>
+            <a href="#">Node.js</a>
+            <a href="#">Angularjs</a>
+            <a href="#">Vue.js</a>
+        </div>
         <div v-show="isBackEnd" class="inner"></div>
     </div>
 
@@ -85,12 +96,20 @@
 
     .inner {
         width: 768px;
-        height: 210px;
-        background-color: black;
+        height: 456px;
+        background-color: white;
         position: absolute;
         float: left;
         left: 216px;
         top: 0;
+    }
+    .inner p{
+        margin: 40px 40px;
+    }
+    .inner a{
+        text-decoration: none;
+        color: #555;
+        margin-left: 40px;
     }
 
 </style>
