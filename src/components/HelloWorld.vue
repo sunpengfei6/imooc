@@ -22,15 +22,16 @@
                 <a href="#">Java入门</a>
             </div>
 
-            <div class="download"><a>下载APP</a></div>
+            <div class="download"><a @mouseover="ondownload" @mouseout="offdownload">下载APP</a></div>
 
             <div class="img_1"><img src="../assets/2.png" width="35px"></div>
 
-            <div class="gou">
+            <div class="shopcar">
                 <a @mouseover="onshopcar" @mouseout="offshopcar">购物车</a>
             </div>
         </div>
-        <div v-show="isshopcar" class="shopcar"></div>
+        <div v-show="isdownload" class="idownload"></div>
+        <div v-show="isshopcar" class="ishopcar"></div>
         <div class="middle">
             <div class="content">
                 <img src="../assets/2.jpg" >
@@ -73,8 +74,8 @@
         components:{iMenu},
         data(){
             return {
-                isshopcar:false
-
+                isshopcar:false,
+                isdownload:false
             }
         },
         methods: {
@@ -83,6 +84,12 @@
             },
             offshopcar(){
                 this.isshopcar = false
+            },
+            ondownload(){
+                this.isdownload = true
+            },
+            offdownload(){
+                this.isdownload = false
             },
         }
     }
@@ -133,7 +140,7 @@
         float: left;
         line-height: 72px;
     }
-    .gou{
+    .shopcar{
         padding-right: 50px;
         height: 72px;
         float: right;
@@ -161,7 +168,7 @@
         color: #333;
 
     }
-    .gou a{
+    .shopcar a{
         height: 35px;
         border: 1px solid;
         border-radius: 35px;
@@ -219,12 +226,20 @@
         /*top:0;*/
         /*opacity:1;*/
     /*}*/
-    .shopcar{
+    .ishopcar{
         width: 350px;
         height: 400px;
-        margin-left: 800px;
+        margin-left: 830px;
         background-color: #888888;
         position: absolute;
+        z-index: 1;
+    }
+    .idownload{
+        width:300px;
+        height: 150px;
+        margin-left: 710px;
+        position: absolute;
+        background-color: #2b333b;
         z-index: 1;
     }
 
