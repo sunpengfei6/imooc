@@ -9,7 +9,7 @@
 
             <div class="menu1">
                 <ul>
-                    <li><a href="#">课程 </a></li>
+                    <li><a href="http://www.imooc.com/course/list">课程 </a></li>
                     <li><a href="#">职业路径</a></li>
                     <li><a href="#">实战</a></li>
                     <li><a href="#">猿问</a></li>
